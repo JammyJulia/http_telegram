@@ -8,6 +8,9 @@
 #
 from faker import Faker
 
+fake = Faker()
+fakeLV = Faker('lv_LV')
+
 while True:
     print("\nNejaušo datu ģenerators:")
     print("1. 5 personu vārdi un uzvārdi")
@@ -19,17 +22,23 @@ while True:
     choice = input("Enter your choice: ")
 
     if choice == "1":
-        pass
+        for _ in range(5):
+            print(fake.name())
     elif choice == "2":
-        pass
+        for _ in range(5):
+            print(fakeLV.name())
     elif choice == "3":
-        pass    
+        for _ in range(5):
+            print(f"{fake.name()}   -   {fake.phone_number()}   -   {fake.address()}   -  {fake.ssn()}")
+            print('')
     elif choice == "4":
         pass
     elif choice == "5":
-        pass
+        length = int(input("Text length: "))
+        print(fake.text(length))
     elif choice == "6":
-        pass
+        for _ in range(5):
+            print(fake.pricetag())
     elif choice == "7":
         break
     else:
