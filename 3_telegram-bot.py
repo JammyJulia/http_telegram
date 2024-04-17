@@ -40,7 +40,7 @@ async def echo(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     await update.message.reply_text("I hear: " + update.message.text)
 
 async def fakeperson(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text(f"**Name:** {fake.name()} \n**Phone Number:** {fake.phone_number()} \n**Address:** {fake.address()} \n**SSN:** {fake.ssn()}")
+    await update.message.reply_text(f"Name: {fake.name()} \nPhone Number: {fake.phone_number()} \nAddress: {fake.address()} \nSSN: {fake.ssn()}")
 
 async def chuck(update: Update, context: ContextTypes.DEFAULT_TYPE):
     request = requests.get('https://api.chucknorris.io/jokes/random')
